@@ -32,7 +32,7 @@ class Trix.BlockView extends Trix.ObjectView
     {tagName} = getBlockConfig(attribute)
     options = {tagName}
 
-    if attribute is "attachmentGallery"
+    if Trix.config.blockAttributes.attachmentGallery.enabled and attribute is "attachmentGallery"
       size = @block.getBlockBreakPosition()
       options.className = "#{css.attachmentGallery} #{css.attachmentGallery}--#{size}"
 
